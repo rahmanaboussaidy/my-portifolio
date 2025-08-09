@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Let's try it</title>
+</head>
+<body>
+    <h1>my first javascript coding</h1>
+    <p>it's look easy and nice</p>
+    <p id="demo"></p>
+    <script>
+        var person = {
+            firstName : "Rahmani",
+            lastName : "Said",
+            Age : 25,
+            eyeColour : "brown",
+            fullName : function(){
+                return this.firstName + " " + this.lastName
+            }
+        }
+        document.getElementById("demo").innerHTML = person.fullName();
+    </script>
+</body>
+</html>
