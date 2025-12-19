@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Coin Flip Game</title>
+</head>
+<body>
+
+<script>
+  // 6f: Generate random number
+  const randomNumber = Math.random();
+
+  // 6h: Save result in a variable using ternary
+  const result = randomNumber < 0.5 ? 'heads' : 'tails';
+
+  // 6i: Your guess
+  const guess = 'heads'; // change to 'tails' if you want
+
+  // Check if guess matches result
+  console.log(`Coin landed on: ${result}`);
+  console.log(
+    guess === result ? 'You win!' : 'You lose!'
+  );
+</script>
+
+</body>
+</html>
