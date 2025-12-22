@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="script.js">
+</head>
+<body>
+    <!-- header -->
+    <Header>
+        <div>
+            <h1>Task Tracker</h1>
+            <p>Organize your day, simply and efficiently</p>
+        </div>
+    </Header>
+
+    <!-- main body -->
+    <main>
+        <!-- Input Area -->
+        <section>
+            <form action="">
+                <label for="task name">Task name: </label>
+                <input type="text" name="task name" placeholder="Enter Task name">
+                <label for="task description">Enter Task Description</label>
+                <textarea name="description" rows="4" cols="50"></textarea>
+                <input type="submit" value="Submit">
+            </form>
+        </section>
+
+        <!-- Task List  -->
+        <section>
+            <h2 class="section-title">My Tasks</h2>
+            <div>
+                <input type="checkbox" id="task1" class="task-checkbox">
+                <label for="task1" class="task-label">Complete project proposal</label>
+            </div>
+            
+            <div>
+                <input type="checkbox" id="task2" class="task-checkbox">
+                <label for="task2" class="task-label">Review team feedback</label>
+            </div>
+            
+            <div>
+                <input type="checkbox" id="task3" class="task-checkbox">
+                <label for="task3" class="task-label">Schedule client meeting</label>
+            </div>
+            
+            <div>
+                <input type="checkbox" id="task4" class="task-checkbox">
+                <label for="task4" class="task-label">Update documentation</label>
+            </div>
+            
+            <div>
+                <input type="checkbox" id="task5" class="task-checkbox">
+                <label for="task5" class="task-label">Prepare presentation slides</label>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- footer  -->
+    <footer>
+
+    </footer>
+</body>
+</html>
