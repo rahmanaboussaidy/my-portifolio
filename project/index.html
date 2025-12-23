@@ -5,64 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Task Tracker</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="script.js">
 </head>
 <body>
-    <!-- header -->
-    <Header>
-        <div>
+    <div class="container">
+        <!-- Header -->
+        <header>
             <h1>Task Tracker</h1>
             <p>Organize your day, simply and efficiently</p>
+        </header>
+
+        <!-- Main Card -->
+        <div class="card">
+            <!-- Input Area -->
+            <section class="form-section">
+                <form id="task-form">
+                    <div>
+                        <label for="task-name">Task Name</label>
+                        <input type="text" id="task-name" placeholder="Enter task name" required>
+                    </div>
+
+                    <div>
+                        <label for="task-desc">Task Description</label>
+                        <textarea id="task-desc" rows="4" placeholder="Enter task description"></textarea>
+                    </div>
+
+                    <button type="submit">Add Task</button>
+                </form>
+            </section>
+
+            <!-- Task List Area -->
+            <section class="task-section">
+                <h2>My Tasks</h2>
+                <div id="task-list">
+                    <div class="empty-message">No tasks yet. Add one to get started!</div>
+                </div>
+            </section>
         </div>
-    </Header>
 
-    <!-- main body -->
-    <main>
-        <!-- Input Area -->
-        <section>
-            <form action="">
-                <label for="task name">Task name: </label>
-                <input type="text" name="task name" placeholder="Enter Task name">
-                <label for="task description">Enter Task Description</label>
-                <textarea name="description" rows="4" cols="50"></textarea>
-                <input type="submit" value="Submit">
-            </form>
-        </section>
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2025 Task Tracker. All rights reserved.</p>
+        </footer>
+    </div>
 
-        <!-- Task List  -->
-        <section>
-            <h2 class="section-title">My Tasks</h2>
-            <div>
-                <input type="checkbox" id="task1" class="task-checkbox">
-                <label for="task1" class="task-label">Complete project proposal</label>
-            </div>
-            
-            <div>
-                <input type="checkbox" id="task2" class="task-checkbox">
-                <label for="task2" class="task-label">Review team feedback</label>
-            </div>
-            
-            <div>
-                <input type="checkbox" id="task3" class="task-checkbox">
-                <label for="task3" class="task-label">Schedule client meeting</label>
-            </div>
-            
-            <div>
-                <input type="checkbox" id="task4" class="task-checkbox">
-                <label for="task4" class="task-label">Update documentation</label>
-            </div>
-            
-            <div>
-                <input type="checkbox" id="task5" class="task-checkbox">
-                <label for="task5" class="task-label">Prepare presentation slides</label>
-            </div>
-
-        </section>
-    </main>
-
-    <!-- footer  -->
-    <footer>
-
-    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
