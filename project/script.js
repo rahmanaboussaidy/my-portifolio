@@ -1,20 +1,15 @@
-
 // Task storage (browser-safe)
-
 let tasks = [];
 
 
 // Initialize app
-
 function init() {
     loadTasks();
     renderTasks();
     setupEventListeners();
 }
 
-
 // Load tasks from localStorage
-
 function loadTasks() {
     const storedTasks = localStorage.getItem('tasks');
 
@@ -25,16 +20,13 @@ function loadTasks() {
     }
 }
 
-
 // Save all tasks to localStorage
-
 function saveTasks() {
     localStorage.setItem('tasks', JSON.stringify(tasks));
 }
 
 
 // Setup event listeners
-
 function setupEventListeners() {
     const form = document.getElementById('task-form');
     const taskList = document.getElementById('task-list');
@@ -47,7 +39,6 @@ function setupEventListeners() {
 
 
 // Add new task
-
 function handleAddTask(e) {
     e.preventDefault();
 
@@ -77,7 +68,6 @@ function handleAddTask(e) {
 
 
 // Handle task actions (complete/delete)
-
 function handleTaskActions(e) {
     const taskId = Number(e.target.dataset.id);
 
@@ -92,7 +82,6 @@ function handleTaskActions(e) {
 
 
 // Toggle completion
-
 function toggleComplete(taskId) {
     const task = tasks.find(t => t.id === taskId);
 
@@ -105,7 +94,6 @@ function toggleComplete(taskId) {
 
 
 // Delete task
-
 function deleteTask(taskId) {
     tasks = tasks.filter(t => t.id !== taskId);
     saveTasks();
@@ -114,7 +102,6 @@ function deleteTask(taskId) {
 
 
 // Render tasks
-
 function renderTasks() {
     const taskList = document.getElementById('task-list');
 
@@ -146,7 +133,6 @@ function renderTasks() {
 
 
 // Escape HTML (XSS protection)
-
 function escapeHtml(text) {
     const div = document.createElement('div');
     div.textContent = text;
@@ -155,5 +141,4 @@ function escapeHtml(text) {
 
 
 // Start app
-
 init();
